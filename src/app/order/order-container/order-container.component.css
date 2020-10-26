@@ -1,0 +1,25 @@
+.row-container{
+  display: flex;
+  align-items: center;
+}
+.order-number{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.order-number-icon{
+  cursor: pointer;
+}
+.caret-container{
+  left: 0px;
+  top: 0px;
+  justify-content: center;
+  width: 22px;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+::ng-deep .detail-table .table-result-base{
+  min-height: auto !important;
+}

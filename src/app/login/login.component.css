@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    background-color: #f5f8fa;
+}
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form
+{
+    padding-top: 15%;
+    padding-bottom: 1.5rem;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.form-control.ng-touched.ng-invalid{
+  border-color: #dc3545;
+}
+
+.custom-control-input.ng-invalid.ng-touched + label.custom-control-label{
+  color: #dc3545;
+}
+
+.custom-control-input.ng-invalid.ng-touched + label.custom-control-label:before,
+.custom-control-input.ng-invalid.ng-touched + label.custom-control-label:after
+{
+  border-color: #dc3545;
+}
+.custom-control-input.ng-invalid.ng-touched:focus~label.custom-control-label:before{
+   box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+}

@@ -1,0 +1,25 @@
+<div class="container mt-2">
+  <div class="offset-md-6 offset-lg-8 col-12 col-sm-12 col-md-6 col-lg-4">
+    <input class="form-control" type="search" [formControl]="searchControl" placeholder="Search">
+  </div>
+  <app-switch-view [templates]="templates" [defaultTemplateKey]="defaultTemplate">
+
+  </app-switch-view>
+
+  <ng-template #cardViewTemplate>
+    <div class="mt-2">
+      <app-supplier-card [items] = 'items'></app-supplier-card>
+    </div>
+  </ng-template>
+  <ng-template #tableViewTemplate>
+    <div class="mt-2">
+      <app-supplier-list-table [items] = 'items'></app-supplier-list-table>
+      <!--<div class="footer">
+         <mat-paginator [length]="numberOfRecords" [pageIndex]="pageIndex" [pageSize]="pageSize"
+          [pageSizeOptions]="pageSizeOptions" (page)="changePage($event)">
+        </mat-paginator>
+      </div>-->
+    </div>
+  </ng-template>
+
+</div>

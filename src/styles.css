@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html{
+  position:relative;
+  min-height: 100%;
+ }
+body {
+  margin-bottom: 50px;
+   font-family: Roboto,
+   "Helvetica Neue", sans-serif;
+  }
+
+  .btn.btn-outline-primary[disabled] {
+    background-color: #808080;
+    color:white;
+    cursor: not-allowed! important;
+  }
+
+  .new-customer-modal-dialog{
+    width: 400px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .new-customer-modal-dialog{
+      width: 260px;
+    }
+  }
+

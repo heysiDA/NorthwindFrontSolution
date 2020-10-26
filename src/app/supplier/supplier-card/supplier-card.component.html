@@ -1,0 +1,21 @@
+<div class="row">
+  <div *ngFor="let item of items" class="supplier-card col-12 col-sm-12 col-md-5 col-lg-4">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{item.companyName}}</mat-card-title>
+        <mat-card-subtitle>Contact Name: {{item.contactName}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{item.city}}
+        </p>
+      </mat-card-content>
+      <!-- <mat-card-actions>
+      <div class="row justify-content-around">
+        <button class="btn btn-outline-primary" (click)="editCustomer(item.id)">Editar</button>
+        <button class="btn btn-outline-danger" (click)="customerDetail(item.id)">Details</button>
+      </div>
+    </mat-card-actions> -->
+    </mat-card>
+  </div>
+</div>

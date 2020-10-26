@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="new-customer">
+    <h1 class="title">{{titleForm}}</h1>
+    <!-- <div class="col-md-8"> -->
+
+    <form [formGroup]="newCustomerForm" (ngSubmit)="titleForm == 'New customer'? createCustomer():editCustomer()">
+      <div class="form-group row">
+        <label for="first_name" class="col-12 col-md-4 col-form-label">First name
+        </label>
+        <div class="col-12 col-md-8">
+          <input type="text" id="first_name" class="form-control" name="first-name" formControlName="firstName">
+          <div class="text-danger"
+            *ngIf="newCustomerForm.invalid && (newCustomerForm.get('firstName').dirty || newCustomerForm.get('firstName').touched)">
+            <div *ngIf="newCustomerForm.get('firstName').hasError('required')">
+              First name is required
+            </div>
+            <!-- <div *ngIf="newCustomerForm.get('firstName').hasError('cannotContainSpace')">
+              First name cannot contain space
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="last_name" class="col-12 col-md-4 col-form-label">Last name
+        </label>
+        <div class="col-12 col-md-8">
+          <input type="text" id="last_name" class="form-control" name="last-name" formControlName="lastName">
+          <div class="text-danger"
+            *ngIf="newCustomerForm.invalid && (newCustomerForm.get('lastName').dirty || newCustomerForm.get('lastName').touched)">
+            <div *ngIf="newCustomerForm.get('lastName').hasError('required')">
+              Last name is required
+            </div>
+            <!-- <div *ngIf="newCustomerForm.get('lastName').hasError('cannotContainSpace')">
+              Last name cannot contain space
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="city" class="col-12 col-md-4 col-form-label">City
+        </label>
+        <div class="col-12 col-md-8">
+          <input type="text" id="city" class="form-control" name="city" formControlName="city">
+          <div class="text-danger"
+            *ngIf="newCustomerForm.invalid && (newCustomerForm.get('city').dirty || newCustomerForm.get('city').touched)">
+            <div *ngIf="newCustomerForm.get('city').hasError('required')">
+              City is required
+            </div>
+            <!-- <div *ngIf="newCustomerForm.get('city').hasError('cannotContainSpace')">
+              City cannot contain space
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="country" class="col-12 col-md-4 col-form-label">Country
+        </label>
+        <div class="col-12 col-md-8">
+          <input type="text" id="country" class="form-control" name="country" formControlName="country">
+          <div class="text-danger"
+            *ngIf="newCustomerForm.invalid && (newCustomerForm.get('country').dirty || newCustomerForm.get('country').touched)">
+            <div *ngIf="newCustomerForm.get('country').hasError('required')">
+              Country  is required
+            </div>
+            <!-- <div *ngIf="newCustomerForm.get('country').hasError('cannotContainSpace')">
+              Country  cannot contain space
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="phone" class="col-12 col-md-4 col-form-label">Phone
+        </label>
+        <div class="col-12 col-md-8">
+          <input type="text" id="phone" class="form-control" name="phone" formControlName="phone">
+          <div class="text-danger"
+            *ngIf="newCustomerForm.invalid && (newCustomerForm.get('phone').dirty || newCustomerForm.get('phone').touched)">
+            <div *ngIf="newCustomerForm.get('phone').hasError('required')">
+              Phone  is required
+            </div>
+            <!-- <div *ngIf="newCustomerForm.get('phone').hasError('cannotContainSpace')">
+              Phone  cannot contain space
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember"> Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> -->
+
+      <!-- <div class="col-md-6 offset-md-4 mt-2">
+        <button type="submit" class="btn btn-outline-primary" [disabled]="!newCustomerForm.valid">
+          Login
+        </button>
+      </div> -->
+      <div class="row justify-content-around">
+        <button class="btn btn-outline-primary" [disabled]="!newCustomerForm.valid" type="submit">Save</button>
+        <button class="btn btn-outline-danger" mat-dialog-close>Close</button>
+      </div>
+    </form>
+
+    <!-- </div> -->
+  </div>
+  <!-- <div mat-dialog-actions> -->
+
+  <!-- </div> -->
+</div>

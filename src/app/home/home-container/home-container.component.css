@@ -1,0 +1,9 @@
+.menu-option{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+  width: 100%;
+}
+.sidenav-container{
+  min-height: 600px;
+}

@@ -1,0 +1,21 @@
+<!-- <div class="container mt-2">
+  <mat-sidenav-container class="">
+    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+  </mat-sidenav-container>
+</div> -->
+<div class="container mt-2 ">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened>
+      <div class="menu-option">
+        <button class="btn btn-outline-primary" routerLink='/home'>Home Option1</button>
+        <button class="btn btn-outline-success" routerLink='/home/home2'>Home Option2</button>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

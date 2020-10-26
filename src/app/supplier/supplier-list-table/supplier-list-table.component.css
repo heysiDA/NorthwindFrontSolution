@@ -1,0 +1,3 @@
+::ng-deep .detail-table .table-result-base{
+  min-height: auto !important;
+}

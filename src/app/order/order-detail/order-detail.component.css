@@ -1,0 +1,11 @@
+.order-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.label-description{
+  width: 120px;
+}
+::ng-deep .detail-table .table-result-base{
+  min-height: auto !important;
+}

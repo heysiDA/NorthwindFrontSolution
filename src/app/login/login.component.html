@@ -1,0 +1,78 @@
+<main class="login-form">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header" style="background-color: #d1d7dd;">Register</div>
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+              <div class="form-group row">
+                <label for="email_address" class="col-md-4 col-form-label text-md-right">Email
+                  </label>
+                <div class="col-md-6">
+                  <input type="text" id="email_address" class="form-control" name="email-address"
+                    formControlName="email">
+                  <div class="text-danger" *ngIf="loginForm.invalid && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                    <div *ngIf="loginForm.get('email').hasError('required')">
+                      Email is required
+                    </div>
+                    <div *ngIf="loginForm.get('email').hasError('email')">
+                      Email is not valid
+                    </div>
+                    <div *ngIf="loginForm.get('email').hasError('cannotContainSpace')">
+                      Email  cannot contain space
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                <div class="col-md-6">
+                  <input type="password" id="password" class="form-control" name="password" formControlName="password">
+                  <div class="text-danger" *ngIf="loginForm.invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                    <div *ngIf="loginForm.get('password').hasError('required')">
+                      Password is required
+                    </div>
+                    <div *ngIf="loginForm.get('password').hasError('minlength')">
+                      Password is at least 4 character long
+                    </div>
+                    <div *ngIf="loginForm.get('password').hasError('maxlength')">
+                      Password can not be longer that 50 characters
+                    </div>
+                    <div *ngIf="loginForm.get('password').hasError('cannotContainSpace')">
+                      Password  cannot contain space
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-danger text-center" *ngIf="loginError">
+               {{loginError}}
+              </div>
+
+              <!-- <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember"> Remember Me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> -->
+
+              <div class="col-md-6 offset-4 mt-2">
+                <button type="submit" class="btn btn-outline-primary" [disabled]="!loginForm.valid">
+                  Login
+                </button>
+                <!-- <a href="#" class="btn btn-link">
+                                    Forgot Your Password?
+                                </a> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

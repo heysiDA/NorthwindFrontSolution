@@ -1,0 +1,29 @@
+<div class="container mt-2">
+  <div class="row">
+    <button class="btn btn-outline-primary" (click)="goBack()">Go Back</button>
+  </div>
+  <!-- <h1 class="title">Details</h1> -->
+  <div class="order-header">
+    <div class="element-details">
+      <label class="label-description">Order Date:
+      </label>
+      <label class="">{{orderItem.orderDate |date}}</label>
+    </div>
+    <div class="element-details">
+      <label class="label-description">Customer Name:
+      </label>
+      <label class="">{{orderItem.customer}}</label>
+    </div>
+    <div class="element-details">
+      <label class="label-description">Total Amount:
+      </label>
+      <label class="">{{orderItem.totalAmount}}</label>
+    </div>
+  </div>
+  <div class="">
+    <app-table-view  class="detail-table" #tableView [items]="orderItem.orderDetails" [columns]="detailColumns">
+
+    </app-table-view>
+  </div>
+
+</div>
